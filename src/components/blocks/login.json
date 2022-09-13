@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_blocks_logins",
+  "info": {
+    "displayName": "WebLogin",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "loginField": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input"
+    },
+    "passwordField": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input"
+    },
+    "forgotPasswordHelperText": {
+      "type": "string"
+    },
+    "signUpHelperText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "onSubmit": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "signUpLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "forgotPasswordLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "supportLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "componentId": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.component-meta"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_actions_action_navigate_tos",
+  "info": {
+    "displayName": "ActionNavigateTo"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "navigateToId": {
+      "type": "string"
+    }
+  }
+}

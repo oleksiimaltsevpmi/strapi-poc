@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_component_metas",
+  "info": {
+    "displayName": "ComponentMeta"
+  },
+  "options": {},
+  "attributes": {
+    "version": {
+      "type": "string"
+    }
+  }
+}

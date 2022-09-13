@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_pages",
+  "info": {
+    "singularName": "web-page",
+    "pluralName": "web-pages",
+    "displayName": "WebPages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "metaSocial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.meta-social"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.header",
+        "blocks.login",
+        "shared.button",
+        "shared.footer-columns",
+        "shared.input",
+        "shared.link",
+        "shared.meta-social",
+        "shared.seo",
+        "global.footer",
+        "global.navigation"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

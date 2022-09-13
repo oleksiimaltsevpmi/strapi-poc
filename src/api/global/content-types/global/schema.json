@@ -1,0 +1,77 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "WebLayout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    },
+    "versions": {
+      "versioned": true
+    }
+  },
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.navigation"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.footer"
+    },
+    "blocks": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        },
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "blocks.header",
+        "blocks.login",
+        "shared.button",
+        "shared.footer-columns",
+        "shared.input",
+        "shared.link",
+        "shared.meta-social",
+        "shared.seo",
+        "global.footer",
+        "global.navigation"
+      ]
+    },
+    "title": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        },
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    }
+  }
+}
