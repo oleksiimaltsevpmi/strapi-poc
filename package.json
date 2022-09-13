@@ -23,6 +23,8 @@
     "fs-extra": "^10.0.0",
     "lodash": "^4.17.21",
     "lodash.set": "^4.3.2",
+    "pg": "^8.8.0",
+    "pg-connection-string": "^2.5.0",
     "sqlite3": "^5.0.11",
     "strapi-plugin-entity-relationship-chart": "^4.1.0",
     "strapi-plugin-navigation": "^2.2.1",
