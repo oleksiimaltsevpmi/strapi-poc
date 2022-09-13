@@ -17,10 +17,10 @@ module.exports = {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }) {
-    const service = strapi.service('api::config-builder.config-builder');
-    const response = await service.screens();
-
-    console.log(JSON.stringify(response, null, 2));
+    // const service = strapi.service('api::config-builder.config-builder');
+    // const response = await service.screens();
+    //
+    // console.log(JSON.stringify(response, null, 2));
     // console.log();
     // console.log(strapi);
   },
