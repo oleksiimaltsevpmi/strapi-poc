@@ -21,6 +21,24 @@ function deepOmit(obj, keysToOmit) {
   return omitFromObject(obj); // return the inner function result
 }
 
+const formatToModelView = (response) => {
+  let result = {...response};
+  const coreFields = ["meta", "type", "componentId"]
+  let resultFormatted = { model: {} };
+
+  Object.keys(result).forEach((key, index) => {
+    const value = result[key];
+
+    if (coreFields.includes(key)) {
+      resultFormatted[key] = value;
+    } else {
+      resultFormatted.model[key] = value;
+    }
+  })
+
+  return resultFormatted;
+}
+
 const transformResponse = (response) => {
   let result = {...response};
 
@@ -72,7 +90,9 @@ module.exports = () => ({
     const response = await strapi.entityService.findOne('api::mobile-page.mobile-page', 2, { populate: "deep" });
     let layoutResponse = await strapi.entityService.findOne('api::mobile-layout.mobile-layout', 1, { populate: "deep" });
 
-    layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt'])
+    const coreFields = ["meta", "type", "componentId"]
+
+    layoutResponse = deepOmit(formatToModelView(layoutResponse), ['id', 'publishedAt', 'createdAt', 'updatedAt', 'body'])
 
     const screen = transformResponse(response);
 

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blocks_mobile_logins",
   "info": {
-    "displayName": "MobileLogin"
+    "displayName": "MobileLogin",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -35,6 +36,12 @@
       "type": "component",
       "repeatable": false,
       "component": "actions.action-navigate-to"
+    },
+    "type": {
+      "type": "string"
+    },
+    "componentId": {
+      "type": "string"
     }
   }
 }
