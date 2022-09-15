@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "footer": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global.footer"
-    },
     "body": {
       "type": "dynamiczone",
       "components": [

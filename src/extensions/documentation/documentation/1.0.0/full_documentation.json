@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-09-15T11:21:52.227Z"
+    "x-generation-date": "2022-09-15T11:28:03.915Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -95,9 +95,6 @@
         "properties": {
           "header": {
             "$ref": "#/components/schemas/GlobalNavigationComponent"
-          },
-          "footer": {
-            "$ref": "#/components/schemas/GlobalFooterComponent"
           },
           "blocks": {
             "type": "array",
@@ -180,9 +177,6 @@
               "header": {
                 "$ref": "#/components/schemas/GlobalNavigationComponent"
               },
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "blocks": {
                 "type": "array",
                 "items": {
@@ -261,9 +255,6 @@
           },
           "header": {
             "$ref": "#/components/schemas/GlobalNavigationComponent"
-          },
-          "footer": {
-            "$ref": "#/components/schemas/GlobalFooterComponent"
           },
           "blocks": {
             "type": "array",
@@ -684,54 +675,6 @@
                                   ]
                                 }
                               }
-                            }
-                          }
-                        },
-                        "footer": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "string"
-                            },
-                            "footerColumns": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "properties": {
-                                  "id": {
-                                    "type": "string"
-                                  },
-                                  "title": {
-                                    "type": "string"
-                                  },
-                                  "links": {
-                                    "type": "array",
-                                    "items": {
-                                      "type": "object",
-                                      "properties": {
-                                        "id": {
-                                          "type": "string"
-                                        },
-                                        "href": {
-                                          "type": "string"
-                                        },
-                                        "label": {
-                                          "type": "string"
-                                        },
-                                        "target": {
-                                          "type": "string",
-                                          "enum": [
-                                            "_blank"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "label": {
-                              "type": "string"
                             }
                           }
                         },
@@ -3201,9 +3144,6 @@
               "header": {
                 "$ref": "#/components/schemas/GlobalNavigationComponent"
               },
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "blocks": {
                 "type": "array",
                 "items": {
@@ -3623,54 +3563,6 @@
                                       ]
                                     }
                                   }
-                                }
-                              }
-                            },
-                            "footer": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "footerColumns": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "title": {
-                                        "type": "string"
-                                      },
-                                      "links": {
-                                        "type": "array",
-                                        "items": {
-                                          "type": "object",
-                                          "properties": {
-                                            "id": {
-                                              "type": "string"
-                                            },
-                                            "href": {
-                                              "type": "string"
-                                            },
-                                            "label": {
-                                              "type": "string"
-                                            },
-                                            "target": {
-                                              "type": "string",
-                                              "enum": [
-                                                "_blank"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "label": {
-                                  "type": "string"
                                 }
                               }
                             },
@@ -6144,9 +6036,6 @@
               "header": {
                 "$ref": "#/components/schemas/GlobalNavigationComponent"
               },
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "blocks": {
                 "type": "array",
                 "items": {
@@ -6566,54 +6455,6 @@
                                       ]
                                     }
                                   }
-                                }
-                              }
-                            },
-                            "footer": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "footerColumns": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "title": {
-                                        "type": "string"
-                                      },
-                                      "links": {
-                                        "type": "array",
-                                        "items": {
-                                          "type": "object",
-                                          "properties": {
-                                            "id": {
-                                              "type": "string"
-                                            },
-                                            "href": {
-                                              "type": "string"
-                                            },
-                                            "label": {
-                                              "type": "string"
-                                            },
-                                            "target": {
-                                              "type": "string",
-                                              "enum": [
-                                                "_blank"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "label": {
-                                  "type": "string"
                                 }
                               }
                             },
@@ -9118,9 +8959,6 @@
               "header": {
                 "$ref": "#/components/schemas/GlobalNavigationComponent"
               },
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "blocks": {
                 "type": "array",
                 "items": {
@@ -9540,54 +9378,6 @@
                                       ]
                                     }
                                   }
-                                }
-                              }
-                            },
-                            "footer": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "footerColumns": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "title": {
-                                        "type": "string"
-                                      },
-                                      "links": {
-                                        "type": "array",
-                                        "items": {
-                                          "type": "object",
-                                          "properties": {
-                                            "id": {
-                                              "type": "string"
-                                            },
-                                            "href": {
-                                              "type": "string"
-                                            },
-                                            "label": {
-                                              "type": "string"
-                                            },
-                                            "target": {
-                                              "type": "string",
-                                              "enum": [
-                                                "_blank"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "label": {
-                                  "type": "string"
                                 }
                               }
                             },
@@ -12061,9 +11851,6 @@
               "header": {
                 "$ref": "#/components/schemas/GlobalNavigationComponent"
               },
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "blocks": {
                 "type": "array",
                 "items": {
@@ -12483,54 +12270,6 @@
                                       ]
                                     }
                                   }
-                                }
-                              }
-                            },
-                            "footer": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "footerColumns": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "title": {
-                                        "type": "string"
-                                      },
-                                      "links": {
-                                        "type": "array",
-                                        "items": {
-                                          "type": "object",
-                                          "properties": {
-                                            "id": {
-                                              "type": "string"
-                                            },
-                                            "href": {
-                                              "type": "string"
-                                            },
-                                            "label": {
-                                              "type": "string"
-                                            },
-                                            "target": {
-                                              "type": "string",
-                                              "enum": [
-                                                "_blank"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "label": {
-                                  "type": "string"
                                 }
                               }
                             },
@@ -15071,54 +14810,6 @@
           }
         }
       },
-      "GlobalFooterComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "footerColumns": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "links": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "href": {
-                        "type": "string"
-                      },
-                      "label": {
-                        "type": "string"
-                      },
-                      "target": {
-                        "type": "string",
-                        "enum": [
-                          "_blank"
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "label": {
-            "type": "string"
-          }
-        }
-      },
       "BlocksHeader": {
         "type": "object",
         "properties": {
@@ -17350,9 +17041,6 @@
             "required": [],
             "type": "object",
             "properties": {
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "body": {
                 "type": "array",
                 "items": {
@@ -17400,9 +17088,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "body": {
                 "type": "array",
                 "items": {
@@ -17747,9 +17432,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "body": {
                 "type": "array",
                 "items": {
@@ -18127,9 +17809,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "body": {
                 "type": "array",
                 "items": {
@@ -18474,9 +18153,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "footer": {
-                "$ref": "#/components/schemas/GlobalFooterComponent"
-              },
               "body": {
                 "type": "array",
                 "items": {
@@ -18864,6 +18540,9 @@
             "enum": [
               "default"
             ]
+          },
+          "componentId": {
+            "type": "string"
           }
         }
       },
@@ -20499,6 +20178,9 @@
             "enum": [
               "default"
             ]
+          },
+          "componentId": {
+            "type": "string"
           }
         }
       },

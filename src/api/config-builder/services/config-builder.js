@@ -92,7 +92,8 @@ module.exports = () => ({
 
     const coreFields = ["meta", "type", "componentId"]
 
-    layoutResponse = deepOmit(formatToModelView(layoutResponse), ['id', 'publishedAt', 'createdAt', 'updatedAt', 'body'])
+    layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt', 'body'])
+    layoutResponse.navComponent = formatToModelView(layoutResponse.navComponent);
 
     const screen = transformResponse(response);
 

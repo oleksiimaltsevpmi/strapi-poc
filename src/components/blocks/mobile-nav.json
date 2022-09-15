@@ -19,6 +19,9 @@
       "enum": [
         "default"
       ]
+    },
+    "componentId": {
+      "type": "string"
     }
   }
 }

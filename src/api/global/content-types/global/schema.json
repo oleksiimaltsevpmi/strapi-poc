@@ -29,16 +29,6 @@
       },
       "component": "global.navigation"
     },
-    "footer": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.footer"
-    },
     "blocks": {
       "pluginOptions": {
         "versions": {
