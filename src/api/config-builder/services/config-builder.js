@@ -74,12 +74,12 @@ module.exports = () => ({
 
     layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt'])
 
-    console.log("layoutResponse", layoutResponse);
+    const screen = transformResponse(response);
 
-    const screen = { ...layoutResponse, body: transformResponse(response) };
+    const result = { ...layoutResponse, ...screen };
 
     return {
-      screens: [screen],
+      screens: [result],
     }
 
     return response;
