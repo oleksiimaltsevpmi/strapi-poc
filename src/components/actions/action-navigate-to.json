@@ -1,14 +1,15 @@
 {
   "collectionName": "components_actions_action_navigate_tos",
   "info": {
-    "displayName": "ActionNavigateTo"
+    "displayName": "ActionNavigateTo",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "type": {
       "type": "string"
     },
-    "navigateToId": {
+    "screenId": {
       "type": "string"
     }
   }

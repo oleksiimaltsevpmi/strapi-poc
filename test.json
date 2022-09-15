@@ -1,0 +1,51 @@
+{
+  "routes": {
+    '/': {
+      "type": 'Layout',
+      "model": {
+        "header": {},
+        "footer": {}
+      },
+      "routes": {
+        '/login': Screen1,
+        '/login2': Screen2,
+      },
+    },
+  }
+}
+
+{
+  "screen_id_login" : '/route',
+}
+
+{
+  "navigaTo": 'screen_id_login'
+} => <a href="screen_id_login" />
+
+
+
+{
+  "routes": [
+    {
+      "type": 'Layout',
+      "model": {
+        "header": {},
+        "footer": {},
+      },
+      "screens": [
+        Screen1,
+        Screen2
+      ]
+    },
+    {
+      "type": 'Layout2',
+      "model": {
+        "footer": {},
+      },
+      "screens": [
+        Screen3,
+        Screen4
+      ]
+    }
+  ]
+}

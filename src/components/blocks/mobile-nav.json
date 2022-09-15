@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_mobile_navs",
+  "info": {
+    "displayName": "MobileNav",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "backButtonAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.back-action"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "default"
+      ]
+    }
+  }
+}

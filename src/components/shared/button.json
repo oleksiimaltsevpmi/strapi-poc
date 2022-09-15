@@ -16,9 +16,6 @@
     },
     "variant": {
       "type": "string"
-    },
-    "href": {
-      "type": "string"
     }
   }
 }

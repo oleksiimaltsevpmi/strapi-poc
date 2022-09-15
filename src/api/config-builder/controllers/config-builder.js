@@ -5,16 +5,14 @@
  */
 
 module.exports = {
-  screens: async (ctx, next) => {
+  screensWeb: async (ctx, next) => {
+    const service = strapi.service('api::config-builder.config-builder');
+    return service.screensWeb();
+  },
+  screensMobile: async (ctx, next) => {
+    const service = strapi.service('api::config-builder.config-builder');
+    console.log(service);
 
-    const response = await strapi.entityService.findOne('api::web-page.web-page', 1);
-
-    return response;
-    console.log(response);
-    try {
-      ctx.body = 'ok';
-    } catch (err) {
-      ctx.body = err;
-    }
+    return service.screensMobile();
   }
 };

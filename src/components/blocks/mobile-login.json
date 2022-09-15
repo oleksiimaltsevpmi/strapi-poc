@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_blocks_mobile_logins",
+  "info": {
+    "displayName": "MobileLogin"
+  },
+  "options": {},
+  "attributes": {
+    "phoneField": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input"
+    },
+    "passwordField": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input"
+    },
+    "onSubmit": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "signUpAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "signUpLabel": {
+      "type": "string"
+    },
+    "forgotPasswordLabel": {
+      "type": "string"
+    },
+    "forgotPasswordAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_pages",
+  "info": {
+    "singularName": "mobile-page",
+    "pluralName": "mobile-pages",
+    "displayName": "MobilePages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "actions.action-navigate-to",
+        "actions.back-action",
+        "blocks.header",
+        "blocks.login",
+        "blocks.mobile-nav",
+        "shared.button",
+        "shared.component-meta",
+        "shared.footer-columns",
+        "shared.input",
+        "shared.link",
+        "shared.meta-social",
+        "shared.seo",
+        "global.footer",
+        "global.navigation",
+        "blocks.mobile-login"
+      ]
+    },
+    "screenId": {
+      "type": "string"
+    }
+  }
+}

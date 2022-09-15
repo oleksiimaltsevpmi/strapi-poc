@@ -18,7 +18,7 @@ module.exports = {
    */
   async bootstrap({ strapi }) {
     // const service = strapi.service('api::config-builder.config-builder');
-    // const response = await service.screens();
+    // const response = await service.screensMobile();
     //
     // console.log(JSON.stringify(response, null, 2));
     // console.log();

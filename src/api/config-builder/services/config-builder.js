@@ -57,12 +57,29 @@ const transformResponse = (response) => {
 }
 
 module.exports = () => ({
-  screens: async (ctx, next) => {
+  screensWeb: async (ctx, next) => {
 
     const response = await strapi.entityService.findOne('api::web-page.web-page', 1, { populate: "deep" });
 
     return {
       screens: [transformResponse(response)],
+    }
+
+    return response;
+  },
+
+  screensMobile: async (ctx, next) => {
+    const response = await strapi.entityService.findOne('api::mobile-page.mobile-page', 2, { populate: "deep" });
+    let layoutResponse = await strapi.entityService.findOne('api::mobile-layout.mobile-layout', 1, { populate: "deep" });
+
+    layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt'])
+
+    console.log("layoutResponse", layoutResponse);
+
+    const screen = { ...layoutResponse, body: transformResponse(response) };
+
+    return {
+      screens: [screen],
     }
 
     return response;

@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "loginField": {
+    "phoneField": {
       "type": "component",
       "repeatable": false,
       "component": "shared.input"

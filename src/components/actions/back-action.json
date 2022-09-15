@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_actions_back_actions",
+  "info": {
+    "displayName": "BackAction"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    }
+  }
+}
