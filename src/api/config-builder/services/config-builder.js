@@ -21,6 +21,15 @@ function deepOmit(obj, keysToOmit) {
   return omitFromObject(obj); // return the inner function result
 }
 
+function replaceKeysDeep(obj, keysMap) { // keysMap = { oldKey1: newKey1, oldKey2: newKey2, etc...
+  return _.transform(obj, function(result, value, key) { // transform to a new object
+
+    var currentKey = keysMap[key] || key; // if the key is in keysMap use the replacement, if not use the original key
+
+    result[currentKey] = _.isObject(value) ? replaceKeysDeep(value, keysMap) : value; // if the key is an object run it through the inner function - replaceKeys
+  });
+}
+
 const formatToModelView = (response) => {
   let result = {...response};
   const coreFields = ["meta", "type", "componentId"]
@@ -80,26 +89,30 @@ module.exports = () => ({
     const response = await strapi.entityService.findOne('api::web-page.web-page', 1, { populate: "deep" });
 
     return {
+      rootScreen: 'Login',
       screens: [transformResponse(response)],
     }
-
-    return response;
   },
 
   screensMobile: async (ctx, next) => {
     const response = await strapi.entityService.findOne('api::mobile-page.mobile-page', 2, { populate: "deep" });
     let layoutResponse = await strapi.entityService.findOne('api::mobile-layout.mobile-layout', 1, { populate: "deep" });
 
-    const coreFields = ["meta", "type", "componentId"]
+    const coreFields = ["meta", "type", "componentId"];
+    const renameKeys = {'componentId' : 'id', 'screenId': 'id'};
 
     layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt', 'body'])
     layoutResponse.navComponent = formatToModelView(layoutResponse.navComponent);
 
-    const screen = transformResponse(response);
+    let screen = transformResponse(response);
 
-    const result = { ...layoutResponse, ...screen };
+    screen = replaceKeysDeep(screen, renameKeys);
+    layoutResponse = replaceKeysDeep(layoutResponse, { 'componentId': 'id' });
+
+    let result = { ...layoutResponse, ...screen };
 
     return {
+      rootScreen: 'Login',
       screens: [result],
     }
 

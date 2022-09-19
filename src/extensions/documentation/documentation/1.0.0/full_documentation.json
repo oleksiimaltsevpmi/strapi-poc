@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-09-15T11:28:03.915Z"
+    "x-generation-date": "2022-09-19T09:26:36.357Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -18535,13 +18535,13 @@
               }
             }
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "default"
-            ]
-          },
           "componentId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "icon": {
             "type": "string"
           }
         }
@@ -20173,13 +20173,13 @@
           "backButtonAction": {
             "$ref": "#/components/schemas/ActionsBackActionComponent"
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "default"
-            ]
-          },
           "componentId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "icon": {
             "type": "string"
           }
         }

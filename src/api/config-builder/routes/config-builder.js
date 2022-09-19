@@ -4,8 +4,8 @@ module.exports = {
      method: 'GET',
      path: '/config-builder/screens/mobile',
      handler: 'config-builder.screensMobile',
-     config: {
-       auth: false,
+       config: {
+         auth: false,
        policies: [],
        middlewares: [],
      },

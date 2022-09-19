@@ -14,13 +14,13 @@
       "repeatable": false,
       "component": "actions.back-action"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "default"
-      ]
-    },
     "componentId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "icon": {
       "type": "string"
     }
   }
