@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_tab_bar_links",
+  "info": {
+    "displayName": "TabBarLink",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "screenId": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    }
+  }
+}

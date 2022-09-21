@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_carousel_slides",
+  "info": {
+    "displayName": "CarouselSlide"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "navigateTo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}

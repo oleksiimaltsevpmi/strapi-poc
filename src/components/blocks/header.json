@@ -1,11 +1,44 @@
 {
   "collectionName": "components_blocks_headers",
   "info": {
-    "displayName": "Header"
+    "displayName": "Header",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "logoLink": {
+      "type": "string"
+    },
+    "accountNavigateToAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "depositButtonAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "depositButtonText": {
+      "type": "string"
+    },
+    "loginButtonText": {
+      "type": "string"
+    },
+    "loginButtonNavigateTo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "signUpButtonText": {
+      "type": "string"
+    },
+    "signUpButtonAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "type": {
       "type": "string"
     }
   }

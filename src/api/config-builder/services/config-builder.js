@@ -83,6 +83,31 @@ const transformResponse = (response) => {
   return result;
 }
 
+const fn = (layout, block) => {
+  const coreFields = ["meta", "type", "componentId"];
+  const renameKeys = {'componentId' : 'id', 'screenId': 'id'};
+
+  console.log("block", layout);
+
+  layout = deepOmit(layout, ['publishedAt', 'createdAt', 'updatedAt', 'body'])
+  layout = deepOmit(formatToModelView(layout), ['id']);
+
+  layout.model.header = formatToModelView(layout.model.header);
+  layout.model.tapBar = {
+    model: {
+      items: deepOmit(layout.model.tapBar, ['__component']),
+      type: 'TapBar',
+    }
+  }
+
+  let screen = transformResponse(block);
+
+  screen = replaceKeysDeep(screen, renameKeys);
+  layout = replaceKeysDeep(layout, { 'componentId': 'id' });
+
+  return { ...layout, ...screen };
+}
+
 module.exports = () => ({
   screensWeb: async (ctx, next) => {
 
@@ -102,7 +127,8 @@ module.exports = () => ({
     const renameKeys = {'componentId' : 'id', 'screenId': 'id'};
 
     layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt', 'body'])
-    layoutResponse.navComponent = formatToModelView(layoutResponse.navComponent);
+    layoutResponse = formatToModelView(layoutResponse);
+    layoutResponse.model.navComponent = formatToModelView(layoutResponse.model.navComponent);
 
     let screen = transformResponse(response);
 
@@ -111,11 +137,17 @@ module.exports = () => ({
 
     let result = { ...layoutResponse, ...screen };
 
-    return {
-      rootScreen: 'Login',
-      screens: [result],
-    }
+    const home = await strapi.entityService.findOne('api::mobile-page.mobile-page', 3, { populate: "deep" });
+    let homeLayout = await strapi.entityService.findOne('api::home-container.home-container', 1, { populate: "deep" });
 
-    return response;
+    const resultHomePage = fn(homeLayout, home)
+
+    return {
+      rootScreen: 'LoginScreen',
+      screens: [
+        result,
+        resultHomePage,
+      ],
+    }
   }
 });

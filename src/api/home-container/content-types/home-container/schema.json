@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_containers",
+  "info": {
+    "singularName": "home-container",
+    "pluralName": "home-containers",
+    "displayName": "HomeContainer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isShowToTopButton": {
+      "type": "boolean"
+    },
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.header"
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.home"
+      ]
+    },
+    "tapBar": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.tab-bar-link"
+      ]
+    }
+  }
+}

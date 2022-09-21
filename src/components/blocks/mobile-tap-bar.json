@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_mobile_tap_bars",
+  "info": {
+    "displayName": "TapBar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.tab-bar-link"
+      ]
+    }
+  }
+}

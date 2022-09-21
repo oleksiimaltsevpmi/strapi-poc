@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_homes",
+  "info": {
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isBannerFixed": {
+      "type": "boolean"
+    },
+    "isShowBanner": {
+      "type": "boolean"
+    },
+    "isShowQab": {
+      "type": "boolean"
+    },
+    "isShowList": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}
