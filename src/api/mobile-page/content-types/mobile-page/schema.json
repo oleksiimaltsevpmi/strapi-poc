@@ -32,7 +32,8 @@
         "shared.seo",
         "global.footer",
         "global.navigation",
-        "blocks.mobile-login"
+        "blocks.mobile-login",
+        "blocks.home"
       ]
     },
     "screenId": {
