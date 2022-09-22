@@ -135,7 +135,8 @@ module.exports = () => ({
 
     let screen = transformResponse(response);
 
-    screen = replaceKeysDeep(screen, renameKeys);
+    screen = deepOmit(screen, ['id']);
+    screen = replaceKeysDeep(screen, { 'componentId': 'id' });
     layoutResponse = replaceKeysDeep(layoutResponse, { 'componentId': 'id' });
 
     let result = { ...layoutResponse, ...screen };
