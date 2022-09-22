@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_blocks_mobile_tap_bars",
+  "collectionName": "components_blocks_mobile_tab_bars",
   "info": {
-    "displayName": "TapBar",
+    "displayName": "TabBar",
     "description": ""
   },
   "options": {},

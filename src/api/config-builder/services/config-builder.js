@@ -56,25 +56,30 @@ const transformResponse = (response) => {
 
   result.components = response.blocks;
 
-  let loginBlock = result.components[0];
-  let loginBlockFormatted = { model: {} };
+  let resultComponents = [];
 
-  Object.keys(loginBlock).forEach((key, index) => {
-    const value = loginBlock[key];
-    if (ignoreFields.includes(key)) {
-      return;
-    }
+  result.components.forEach((component) => {
+    let block = component;
+    let blockFormatted = { model: {} };
+    block.componentId = block.type;
 
-    if (coreFields.includes(key)) {
-      loginBlockFormatted[key] = value;
-    } else {
-      loginBlockFormatted.model[key] = value;
-    }
+    Object.keys(block).forEach((key, index) => {
+      const value = block[key];
+      if (ignoreFields.includes(key)) {
+        return;
+      }
+
+      if (coreFields.includes(key)) {
+        blockFormatted[key] = value;
+      } else {
+        blockFormatted.model[key] = value;
+      }
+    })
+
+    resultComponents.push(blockFormatted);
   })
 
-  loginBlockFormatted = deepOmit(loginBlockFormatted, ['id'])
-
-  result.components = [loginBlockFormatted];
+  result.components = resultComponents;
 
   result = deepOmit(result, ['publishedAt', 'createdAt', 'updatedAt'])
 
@@ -83,29 +88,29 @@ const transformResponse = (response) => {
   return result;
 }
 
-const fn = (layout, block) => {
+const fn = (container, block) => {
   const coreFields = ["meta", "type", "componentId"];
   const renameKeys = {'componentId' : 'id', 'screenId': 'id'};
 
-  console.log("block", layout);
+  container = deepOmit(container, ['publishedAt', 'createdAt', 'updatedAt', 'body'])
+  container = deepOmit(container, ['id']);
 
-  layout = deepOmit(layout, ['publishedAt', 'createdAt', 'updatedAt', 'body'])
-  layout = deepOmit(formatToModelView(layout), ['id']);
-
-  layout.model.header = formatToModelView(layout.model.header);
-  layout.model.tapBar = {
-    model: {
-      items: deepOmit(layout.model.tapBar, ['__component']),
-      type: 'TapBar',
-    }
+  container.tabBar = {
+    items: deepOmit(container.tabBar, ['__component']),
+    type: 'TabBar',
   }
+
+  container.id = container.screenId;
+  delete container.screenId;
 
   let screen = transformResponse(block);
 
-  screen = replaceKeysDeep(screen, renameKeys);
-  layout = replaceKeysDeep(layout, { 'componentId': 'id' });
+  screen.parentScreenId = container.id;
 
-  return { ...layout, ...screen };
+  screen = replaceKeysDeep(screen, renameKeys);
+  container = replaceKeysDeep(container, { 'componentId': 'id' });
+
+  return [container, screen];
 }
 
 module.exports = () => ({
@@ -127,8 +132,6 @@ module.exports = () => ({
     const renameKeys = {'componentId' : 'id', 'screenId': 'id'};
 
     layoutResponse = deepOmit(layoutResponse, ['id', 'publishedAt', 'createdAt', 'updatedAt', 'body'])
-    layoutResponse = formatToModelView(layoutResponse);
-    layoutResponse.model.navComponent = formatToModelView(layoutResponse.model.navComponent);
 
     let screen = transformResponse(response);
 
@@ -138,15 +141,15 @@ module.exports = () => ({
     let result = { ...layoutResponse, ...screen };
 
     const home = await strapi.entityService.findOne('api::mobile-page.mobile-page', 3, { populate: "deep" });
-    let homeLayout = await strapi.entityService.findOne('api::home-container.home-container', 1, { populate: "deep" });
+    let homeContainer = await strapi.entityService.findOne('api::home-container.home-container', 1, { populate: "deep" });
 
-    const resultHomePage = fn(homeLayout, home)
+    const resultHomePage = fn(homeContainer, home)
 
     return {
       rootScreen: 'LoginScreen',
       screens: [
         result,
-        resultHomePage,
+        ...resultHomePage,
       ],
     }
   }

@@ -12,7 +12,7 @@
     "screenId": {
       "type": "string"
     },
-    "key": {
+    "icon": {
       "type": "string"
     }
   }

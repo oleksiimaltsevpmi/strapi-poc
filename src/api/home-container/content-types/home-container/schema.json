@@ -26,11 +26,17 @@
         "blocks.home"
       ]
     },
-    "tapBar": {
+    "tabBar": {
       "type": "dynamiczone",
       "components": [
         "blocks.tab-bar-link"
       ]
+    },
+    "screenId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }

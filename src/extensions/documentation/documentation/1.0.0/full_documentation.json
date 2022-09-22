@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-09-21T22:33:32.729Z"
+    "x-generation-date": "2022-09-22T11:19:16.965Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -17421,7 +17421,7 @@
                   ]
                 }
               },
-              "tapBar": {
+              "tabBar": {
                 "type": "array",
                 "items": {
                   "anyOf": [
@@ -17430,6 +17430,12 @@
                     }
                   ]
                 }
+              },
+              "screenId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
               }
             }
           }
@@ -17460,7 +17466,7 @@
                   ]
                 }
               },
-              "tapBar": {
+              "tabBar": {
                 "type": "array",
                 "items": {
                   "anyOf": [
@@ -17469,6 +17475,12 @@
                     }
                   ]
                 }
+              },
+              "screenId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -17796,7 +17808,7 @@
                   ]
                 }
               },
-              "tapBar": {
+              "tabBar": {
                 "type": "array",
                 "items": {
                   "anyOf": [
@@ -17805,6 +17817,12 @@
                     }
                   ]
                 }
+              },
+              "screenId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -18165,7 +18183,7 @@
                   ]
                 }
               },
-              "tapBar": {
+              "tabBar": {
                 "type": "array",
                 "items": {
                   "anyOf": [
@@ -18174,6 +18192,12 @@
                     }
                   ]
                 }
+              },
+              "screenId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -18501,7 +18525,7 @@
                   ]
                 }
               },
-              "tapBar": {
+              "tabBar": {
                 "type": "array",
                 "items": {
                   "anyOf": [
@@ -18510,6 +18534,12 @@
                     }
                   ]
                 }
+              },
+              "screenId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -18910,20 +18940,11 @@
           "__component": {
             "type": "string"
           },
-          "isBannerFixed": {
-            "type": "boolean"
-          },
-          "isShowBanner": {
-            "type": "boolean"
-          },
-          "isShowQab": {
-            "type": "boolean"
-          },
-          "isShowList": {
-            "type": "boolean"
-          },
           "type": {
             "type": "string"
+          },
+          "isShowToTopButton": {
+            "type": "boolean"
           }
         }
       },
@@ -18942,7 +18963,7 @@
           "screenId": {
             "type": "string"
           },
-          "key": {
+          "icon": {
             "type": "string"
           }
         }
@@ -20526,6 +20547,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
                     }
                   ]
                 }
@@ -20600,6 +20624,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
                     }
                   ]
                 }
@@ -20971,6 +20998,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
                     }
                   ]
                 }
@@ -21375,6 +21405,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
                     }
                   ]
                 }
@@ -21746,6 +21779,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
                     }
                   ]
                 }
@@ -22163,6 +22199,20 @@
             "type": "string"
           },
           "componentId": {
+            "type": "string"
+          }
+        }
+      },
+      "BlocksBanner": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "type": {
             "type": "string"
           }
         }

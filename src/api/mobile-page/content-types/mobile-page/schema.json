@@ -33,7 +33,8 @@
         "global.footer",
         "global.navigation",
         "blocks.mobile-login",
-        "blocks.home"
+        "blocks.home",
+        "blocks.banner"
       ]
     },
     "screenId": {
