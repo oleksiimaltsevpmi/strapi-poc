@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "isShowToTopButton": {
-      "type": "boolean"
-    },
     "header": {
       "type": "component",
       "repeatable": false,
@@ -26,17 +23,35 @@
         "blocks.home"
       ]
     },
-    "tabBar": {
-      "type": "dynamiczone",
-      "components": [
-        "blocks.tab-bar-link"
-      ]
-    },
     "screenId": {
       "type": "string"
     },
     "type": {
       "type": "string"
+    },
+    "footer": {
+      "type": "dynamiczone",
+      "components": [
+        "actions.action-navigate-to",
+        "actions.back-action",
+        "blocks.banner",
+        "blocks.header",
+        "blocks.home",
+        "blocks.login",
+        "blocks.mobile-login",
+        "blocks.mobile-nav",
+        "blocks.mobile-tab-bar",
+        "blocks.tab-bar-link",
+        "global.footer",
+        "global.navigation",
+        "shared.button",
+        "shared.component-meta",
+        "shared.footer-columns",
+        "shared.input",
+        "shared.link",
+        "shared.meta-social",
+        "shared.seo"
+      ]
     }
   }
 }

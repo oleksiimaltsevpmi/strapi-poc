@@ -1,36 +1,15 @@
 {
   "collectionName": "components_blocks_mobile_logins",
   "info": {
-    "displayName": "MobileLogin",
+    "displayName": "MobileSignUp",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "phoneField": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.input"
-    },
-    "passwordField": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.input"
-    },
-    "onSubmit": {
+    "onSignUpAction": {
       "type": "component",
       "repeatable": false,
       "component": "actions.action-navigate-to"
-    },
-    "signUpAction": {
-      "type": "component",
-      "repeatable": false,
-      "component": "actions.action-navigate-to"
-    },
-    "signUpLabel": {
-      "type": "string"
-    },
-    "forgotPasswordLabel": {
-      "type": "string"
     },
     "forgotPasswordAction": {
       "type": "component",
@@ -42,6 +21,33 @@
     },
     "componentId": {
       "type": "string"
+    },
+    "isShowPromocode": {
+      "type": "boolean"
+    },
+    "welcomeBonusTermsAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "acceptedAgreementAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "loginInAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "actions.action-navigate-to"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "acceptAgreementSelected": {
+      "type": "boolean"
+    },
+    "termsConditionsSelected": {
+      "type": "boolean"
     }
   }
 }

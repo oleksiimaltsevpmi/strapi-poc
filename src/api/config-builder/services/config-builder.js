@@ -95,17 +95,20 @@ const fn = (container, block) => {
   container = deepOmit(container, ['publishedAt', 'createdAt', 'updatedAt', 'body'])
   container = deepOmit(container, ['id']);
 
-  container.tabBar = {
-    items: deepOmit(container.tabBar, ['__component']),
+  delete container.header;
+
+  container.footer = {
+    models: {
+      items: deepOmit(container.footer, ['__component']),
+    },
     type: 'TabBar',
+    componentId: 'TabBar',
   }
 
   container.id = container.screenId;
   delete container.screenId;
 
   let screen = transformResponse(block);
-
-  screen.parentScreenId = container.id;
 
   screen = replaceKeysDeep(screen, renameKeys);
   container = replaceKeysDeep(container, { 'componentId': 'id' });
@@ -135,9 +138,13 @@ module.exports = () => ({
 
     let screen = transformResponse(response);
 
+    layoutResponse.header = formatToModelView(layoutResponse.header);
+
     screen = deepOmit(screen, ['id']);
+
     screen = replaceKeysDeep(screen, { 'componentId': 'id' });
     layoutResponse = replaceKeysDeep(layoutResponse, { 'componentId': 'id' });
+    // screen.header = formatToModelView(screen.header);
 
     let result = { ...layoutResponse, ...screen };
 

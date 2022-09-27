@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-09-22T11:38:11.961Z"
+    "x-generation-date": "2022-09-27T15:23:52.094Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -17405,9 +17405,6 @@
             "required": [],
             "type": "object",
             "properties": {
-              "isShowToTopButton": {
-                "type": "boolean"
-              },
               "header": {
                 "$ref": "#/components/schemas/BlocksHeaderComponent"
               },
@@ -17421,21 +17418,75 @@
                   ]
                 }
               },
-              "tabBar": {
-                "type": "array",
-                "items": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/BlocksTabBarLink"
-                    }
-                  ]
-                }
-              },
               "screenId": {
                 "type": "string"
               },
               "type": {
                 "type": "string"
+              },
+              "footer": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ActionsActionNavigateTo"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ActionsBackAction"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHeader"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileNav"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileTabBar"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksTabBarLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalFooter"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalNavigation"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedButton"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedComponentMeta"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedFooterColumns"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedInput"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedMetaSocial"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedSeo"
+                    }
+                  ]
+                }
               }
             }
           }
@@ -17450,9 +17501,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "isShowToTopButton": {
-                "type": "boolean"
-              },
               "header": {
                 "$ref": "#/components/schemas/BlocksHeaderComponent"
               },
@@ -17466,21 +17514,75 @@
                   ]
                 }
               },
-              "tabBar": {
-                "type": "array",
-                "items": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/BlocksTabBarLink"
-                    }
-                  ]
-                }
-              },
               "screenId": {
                 "type": "string"
               },
               "type": {
                 "type": "string"
+              },
+              "footer": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ActionsActionNavigateTo"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ActionsBackAction"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHeader"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileNav"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileTabBar"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksTabBarLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalFooter"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalNavigation"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedButton"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedComponentMeta"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedFooterColumns"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedInput"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedMetaSocial"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedSeo"
+                    }
+                  ]
+                }
               },
               "createdAt": {
                 "type": "string",
@@ -17792,9 +17894,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "isShowToTopButton": {
-                "type": "boolean"
-              },
               "header": {
                 "$ref": "#/components/schemas/BlocksHeaderComponent"
               },
@@ -17808,21 +17907,75 @@
                   ]
                 }
               },
-              "tabBar": {
-                "type": "array",
-                "items": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/BlocksTabBarLink"
-                    }
-                  ]
-                }
-              },
               "screenId": {
                 "type": "string"
               },
               "type": {
                 "type": "string"
+              },
+              "footer": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ActionsActionNavigateTo"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ActionsBackAction"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHeader"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileNav"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileTabBar"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksTabBarLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalFooter"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalNavigation"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedButton"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedComponentMeta"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedFooterColumns"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedInput"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedMetaSocial"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedSeo"
+                    }
+                  ]
+                }
               },
               "createdAt": {
                 "type": "string",
@@ -18167,9 +18320,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "isShowToTopButton": {
-                "type": "boolean"
-              },
               "header": {
                 "$ref": "#/components/schemas/BlocksHeaderComponent"
               },
@@ -18183,21 +18333,75 @@
                   ]
                 }
               },
-              "tabBar": {
-                "type": "array",
-                "items": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/BlocksTabBarLink"
-                    }
-                  ]
-                }
-              },
               "screenId": {
                 "type": "string"
               },
               "type": {
                 "type": "string"
+              },
+              "footer": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ActionsActionNavigateTo"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ActionsBackAction"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHeader"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileNav"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileTabBar"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksTabBarLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalFooter"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalNavigation"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedButton"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedComponentMeta"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedFooterColumns"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedInput"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedMetaSocial"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedSeo"
+                    }
+                  ]
+                }
               },
               "createdAt": {
                 "type": "string",
@@ -18509,9 +18713,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "isShowToTopButton": {
-                "type": "boolean"
-              },
               "header": {
                 "$ref": "#/components/schemas/BlocksHeaderComponent"
               },
@@ -18525,21 +18726,75 @@
                   ]
                 }
               },
-              "tabBar": {
-                "type": "array",
-                "items": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/BlocksTabBarLink"
-                    }
-                  ]
-                }
-              },
               "screenId": {
                 "type": "string"
               },
               "type": {
                 "type": "string"
+              },
+              "footer": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ActionsActionNavigateTo"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ActionsBackAction"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBanner"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHeader"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksHome"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileLogin"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileNav"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksMobileTabBar"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksTabBarLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalFooter"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalNavigation"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedButton"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedComponentMeta"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedFooterColumns"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedInput"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedLink"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedMetaSocial"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SharedSeo"
+                    }
+                  ]
+                }
               },
               "createdAt": {
                 "type": "string",
@@ -18948,6 +19203,129 @@
           }
         }
       },
+      "ActionsActionNavigateTo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "screenId": {
+            "type": "string"
+          }
+        }
+      },
+      "ActionsBackAction": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "BlocksBanner": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "BlocksMobileLogin": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "onSignUpAction": {
+            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
+          },
+          "forgotPasswordAction": {
+            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
+          },
+          "type": {
+            "type": "string"
+          },
+          "componentId": {
+            "type": "string"
+          },
+          "isShowPromocode": {
+            "type": "boolean"
+          },
+          "welcomeBonusTermsAction": {
+            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
+          },
+          "acceptedAgreementAction": {
+            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
+          },
+          "loginInAction": {
+            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
+          },
+          "countryCode": {
+            "type": "string"
+          },
+          "acceptAgreementSelected": {
+            "type": "boolean"
+          },
+          "termsConditionsSelected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ActionsBackActionComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "BlocksMobileNav": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "backButtonAction": {
+            "$ref": "#/components/schemas/ActionsBackActionComponent"
+          },
+          "componentId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "BlocksTabBarLink": {
         "type": "object",
         "properties": {
@@ -18964,6 +19342,41 @@
             "type": "string"
           },
           "icon": {
+            "type": "string"
+          }
+        }
+      },
+      "BlocksMobileTabBar": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/BlocksTabBarLink"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "SharedComponentMeta": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "version": {
             "type": "string"
           }
         }
@@ -19009,7 +19422,7 @@
                   ]
                 }
               },
-              "navComponent": {
+              "header": {
                 "$ref": "#/components/schemas/BlocksMobileNavComponent"
               }
             }
@@ -19056,7 +19469,7 @@
                   ]
                 }
               },
-              "navComponent": {
+              "header": {
                 "$ref": "#/components/schemas/BlocksMobileNavComponent"
               },
               "createdAt": {
@@ -19400,7 +19813,7 @@
                   ]
                 }
               },
-              "navComponent": {
+              "header": {
                 "$ref": "#/components/schemas/BlocksMobileNavComponent"
               },
               "createdAt": {
@@ -19777,7 +20190,7 @@
                   ]
                 }
               },
-              "navComponent": {
+              "header": {
                 "$ref": "#/components/schemas/BlocksMobileNavComponent"
               },
               "createdAt": {
@@ -20121,7 +20534,7 @@
                   ]
                 }
               },
-              "navComponent": {
+              "header": {
                 "$ref": "#/components/schemas/BlocksMobileNavComponent"
               },
               "createdAt": {
@@ -20435,23 +20848,6 @@
           }
         }
       },
-      "ActionsActionNavigateTo": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "screenId": {
-            "type": "string"
-          }
-        }
-      },
       "BlocksMobileNavComponent": {
         "type": "object",
         "properties": {
@@ -20476,9 +20872,6 @@
             "type": "string"
           },
           "type": {
-            "type": "string"
-          },
-          "icon": {
             "type": "string"
           }
         }
@@ -22097,123 +22490,6 @@
           },
           "meta": {
             "type": "object"
-          }
-        }
-      },
-      "ActionsBackAction": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          }
-        }
-      },
-      "ActionsBackActionComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          }
-        }
-      },
-      "BlocksMobileNav": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "backButtonAction": {
-            "$ref": "#/components/schemas/ActionsBackActionComponent"
-          },
-          "componentId": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "icon": {
-            "type": "string"
-          }
-        }
-      },
-      "SharedComponentMeta": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          }
-        }
-      },
-      "BlocksMobileLogin": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "phoneField": {
-            "$ref": "#/components/schemas/SharedInputComponent"
-          },
-          "passwordField": {
-            "$ref": "#/components/schemas/SharedInputComponent"
-          },
-          "onSubmit": {
-            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
-          },
-          "signUpAction": {
-            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
-          },
-          "signUpLabel": {
-            "type": "string"
-          },
-          "forgotPasswordLabel": {
-            "type": "string"
-          },
-          "forgotPasswordAction": {
-            "$ref": "#/components/schemas/ActionsActionNavigateToComponent"
-          },
-          "type": {
-            "type": "string"
-          },
-          "componentId": {
-            "type": "string"
-          }
-        }
-      },
-      "BlocksBanner": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
           }
         }
       },
