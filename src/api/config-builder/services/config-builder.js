@@ -154,7 +154,7 @@ module.exports = () => ({
     const resultHomePage = fn(homeContainer, home)
 
     return {
-      rootScreen: 'LoginScreen',
+      rootScreen: 'SignUpScreen',
       screens: [
         result,
         ...resultHomePage,
