@@ -20,5 +20,15 @@ module.exports = {
        middlewares: [],
      },
     },
+    {
+     method: 'GET',
+     path: '/config-builder/screens/mobile-opt-sign-up',
+     handler: 'config-builder.screensMobileOtpSignUp',
+     config: {
+       auth: false,
+       policies: [],
+       middlewares: [],
+     },
+    },
   ],
 };

@@ -3,6 +3,7 @@
 /**
  * A set of functions called "actions" for `config-builder`
  */
+const signUpJson = require('./sign-up-otp.json');
 
 module.exports = {
   screensWeb: async (ctx, next) => {
@@ -14,5 +15,8 @@ module.exports = {
     console.log(service);
 
     return service.screensMobile();
+  },
+  screensMobileOtpSignUp: async (ctx, next) => {
+    return signUpJson
   }
 };

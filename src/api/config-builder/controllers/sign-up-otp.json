@@ -1,0 +1,119 @@
+{
+  "rootId": "signUp",
+  "screens": [
+    {
+      "id": "signUp",
+      "header": {
+        "id": "header",
+        "type": "regularHeader",
+        "model": {
+          "type": "regularHeader",
+          "title": "Sign up",
+          "backButtonAction": {
+            "type": "popUpToPrevious"
+          }
+        }
+      },
+      "components": [
+        {
+          "id": "signUp",
+          "type": "signPhoneOtp",
+          "model": {
+            "type": "signPhoneOtp",
+            "acceptAgreementSelected": true,
+            "bonusAgreementSelected": true,
+            "codeLength": 6,
+            "onSignUpAction": {
+              "type": "changeRoot",
+              "screenId": "home"
+            },
+            "forgotPasswordAction": {
+              "type": "push",
+              "screenId": "forgotPassword"
+            },
+            "loginAction": {
+              "type": "push",
+              "screenId": "login"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "components": [],
+      "footer": {
+        "id": "footer",
+        "type": "footerRegular",
+        "model": {
+          "type": "footerRegular",
+          "items": [
+            {
+              "title": "Main",
+              "icon": "IC_24_HOME_LOGO",
+              "screenId": "main"
+            },
+            {
+              "title": "Sport",
+              "icon": "IC_24_SPORTS",
+              "screenId": "sport"
+            },
+            {
+              "title": "Casino",
+              "icon": "IC_24_CASINO",
+              "screenId": "casino"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "main",
+      "header": {
+        "id": "header",
+        "type": "rightButtonsHeader",
+        "model": {
+          "type": "rightButtonsHeader",
+          "leftImage": "https://parimatch.ng/assets/layout/logo-chelsea.webp",
+          "rightButtons": [
+            {
+              "text": "Login",
+              "style": "secondary",
+              "action": {
+                "type": "push",
+                "screenId": "login"
+              }
+            },
+            {
+              "text": "Sign up",
+              "style": "primary",
+              "action": {
+                "type": "push",
+                "screenId": "signUp"
+              }
+            }
+          ]
+        }
+      },
+      "components": [
+        {
+          "id": "banner",
+          "type": "bannerRegular",
+          "model": {
+            "type": "bannerRegular",
+            "title": "Hot picks of the day",
+            "imageUrl": "https://parimatch.ng/assets/slides/Sports_154x154px_ae86625b16.webp",
+            "backgroundColorToken": "DYNAMIC_GREEN"
+          }
+        },
+        {
+          "id": "mainSport",
+          "type": "mainSportRegular",
+          "model": {
+            "type": "mainSportRegular"
+          }
+        }
+      ]
+    }
+  ]
+}
